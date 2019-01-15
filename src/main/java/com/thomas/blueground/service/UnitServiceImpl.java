@@ -42,4 +42,14 @@ public class UnitServiceImpl implements  UnitService {
                 .collect(Collectors.toList());
 
     }
+
+    @Override
+    public List<UnitModel> findByRegion(String region){
+
+        return unitRepository
+                .findByRegionContaining(region)
+                .stream()
+                .map(unit -> unitMapper.mapToUnitModel(unit))
+                .collect(Collectors.toList());
+    }
 }

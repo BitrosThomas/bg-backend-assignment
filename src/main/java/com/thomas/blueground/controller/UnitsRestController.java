@@ -25,4 +25,9 @@ public class UnitsRestController {
     public List<UnitModel> findByTitle(@PathVariable String title) {
         return unitService.findByTitle(title);
     }
+
+    @GetMapping(path = "/api/units/{region}")
+    public List<UnitModel> findByRegion(@PathVariable String region) {
+        return unitService.findByRegion(region);
+    }
 }
