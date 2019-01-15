@@ -21,12 +21,12 @@ public class UnitsRestController {
         return ResponseEntity.ok(unitService.findAll());
     }
 
-    @GetMapping(path = "/api/units/{title}")
+    @GetMapping(path = "/api/units/title/{title}")
     public List<UnitModel> findByTitle(@PathVariable String title) {
         return unitService.findByTitle(title);
     }
 
-    @GetMapping(path = "/api/units/{region}")
+    @GetMapping(path = "/api/units/region/{region}")
     public List<UnitModel> findByRegion(@PathVariable String region) {
         return unitService.findByRegion(region);
     }
