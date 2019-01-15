@@ -1,5 +1,6 @@
 package com.thomas.blueground.service;
 
+import com.thomas.blueground.domain.Unit;
 import com.thomas.blueground.mappers.UnitToUnitModelMapper;
 import com.thomas.blueground.model.UnitModel;
 import com.thomas.blueground.repository.UnitRepository;
@@ -7,6 +8,7 @@ import com.thomas.blueground.repository.UnitRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -27,6 +29,8 @@ public class UnitServiceImpl implements  UnitService {
         return unitRepository
                 .findAll()
                 .stream()
+                .sorted(Comparator.comparingDouble(Unit::getScore)
+                .reversed())
                 .map(unit -> unitMapper.mapToUnitModel(unit))
                 .collect(Collectors.toList());
 
@@ -38,6 +42,8 @@ public class UnitServiceImpl implements  UnitService {
         return unitRepository
                 .findByTitleContaining(title)
                 .stream()
+                .sorted(Comparator.comparingDouble(Unit::getScore)
+                .reversed())
                 .map(unit -> unitMapper.mapToUnitModel(unit))
                 .collect(Collectors.toList());
 
@@ -49,6 +55,8 @@ public class UnitServiceImpl implements  UnitService {
         return unitRepository
                 .findByRegionContaining(region)
                 .stream()
+                .sorted(Comparator.comparingDouble(Unit::getScore)
+                .reversed())
                 .map(unit -> unitMapper.mapToUnitModel(unit))
                 .collect(Collectors.toList());
     }
