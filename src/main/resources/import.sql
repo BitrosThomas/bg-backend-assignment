@@ -10,6 +10,6 @@
 -- following script contains hash password values for password pass1234
 
 
-INSERT INTO UNIT (unit_image, unit_title, unit_region, unit_description, unit_cancellation, unit_price, unit_score) VALUES ('imageurl1', 'Moon', 'Armstrong Street', 'its very cold', '10 days refund','1000.0','4');
-INSERT INTO UNIT (unit_image, unit_title, unit_region, unit_description, unit_cancellation, unit_price, unit_score) VALUES ('imageurl2', 'Mars', 'Mars Street', 'its very warm', '20 days refund','20000.0','5');
-INSERT INTO UNIT (unit_image, unit_title, unit_region, unit_description, unit_cancellation, unit_price, unit_score) VALUES ('imageurl3', 'Earth', 'Theatrou Street', 'its normal', '30 days refund','500000.0','2');
+INSERT INTO UNIT (unit_image, unit_title, unit_region, unit_description, unit_cancellation, unit_price, unit_score) VALUES ('imageurl1', 'Moon', 'Darkside', 'its very cold', '10 days refund','1000.0','4');
+INSERT INTO UNIT (unit_image, unit_title, unit_region, unit_description, unit_cancellation, unit_price, unit_score) VALUES ('imageurl2', 'Mars', 'Seaside', 'its very warm', '20 days refund','20000.0','5');
+INSERT INTO UNIT (unit_image, unit_title, unit_region, unit_description, unit_cancellation, unit_price, unit_score) VALUES ('imageurl3', 'Earth', 'Attica', 'its normal', '30 days refund','500000.0','2');
