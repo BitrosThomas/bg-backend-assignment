@@ -40,4 +40,9 @@ public class Review {
     public void setComment(String comment) {
         this.comment = comment;
     }
+
+    public Review(double score, String comment){
+        this.score = score;
+        this.comment = comment;
+    }
 }

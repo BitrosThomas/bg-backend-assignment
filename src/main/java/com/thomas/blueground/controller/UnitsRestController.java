@@ -1,17 +1,20 @@
 package com.thomas.blueground.controller;
 
+import com.thomas.blueground.model.ReviewModel;
 import com.thomas.blueground.model.UnitModel;
+import com.thomas.blueground.service.ReviewService;
+import com.thomas.blueground.service.ReviewServiceImpl;
 import com.thomas.blueground.service.UnitService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 public class UnitsRestController {
+
 
     @Autowired
     private UnitService unitService;
@@ -30,4 +33,7 @@ public class UnitsRestController {
     public List<UnitModel> findByRegion(@PathVariable String region) {
         return unitService.findByRegion(region);
     }
+
+
+
 }
