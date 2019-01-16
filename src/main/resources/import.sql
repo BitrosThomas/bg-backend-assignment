@@ -22,3 +22,5 @@ INSERT INTO UNIT (unit_image, unit_title, unit_region, unit_description, unit_ca
 INSERT INTO UNIT (unit_image, unit_title, unit_region, unit_description, unit_cancellation, unit_price, unit_score) VALUES ('imageurl10', 'Earth', 'Attica', 'its normal', '45 days refund','53000.0','3.1');
 INSERT INTO UNIT (unit_image, unit_title, unit_region, unit_description, unit_cancellation, unit_price, unit_score) VALUES ('imageurl11', 'Earth', 'Attica', 'its normal', '30 days refund','20000.0','2.7');
 INSERT INTO UNIT (unit_image, unit_title, unit_region, unit_description, unit_cancellation, unit_price, unit_score) VALUES ('imageurl12', 'Earth', 'Attica', 'its normal', '100 days refund','500000.0','4.8');
+
+INSERT INTO REVIEW (review_score, review_comment, unit_id) VALUES ('4.5', 'This is a review comment', '1');

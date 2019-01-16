@@ -1,6 +1,7 @@
 package com.thomas.blueground.domain;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "UNIT")
@@ -32,6 +33,35 @@ public class Unit {
     @Column(name = "unit_score")
     private double score;
 
+    @OneToMany(mappedBy = "unit", cascade = CascadeType.REMOVE, targetEntity = Review.class)
+    private List<Review> reviews;
+
+//    public Unit(String image, String title, String region, String description, String cancellation, double price, double score, List<Review> reviews) {
+//        this.image = image;
+//        this.title = title;
+//        this.region = region;
+//        this.description = description;
+//        this.cancellation = cancellation;
+//        this.price = price;
+//        this.score = score;
+//        this.reviews = reviews;
+//    }
+//
+//    public Unit(Long id,String image, String title, String region, String description, String cancellation, double price, double score){
+//        this.image = image;
+//        this.title = title;
+//        this.region = region;
+//        this.description = description;
+//        this.cancellation = cancellation;
+//        this.price = price;
+//        this.score = score;
+//    }
+//
+//    public Unit() {
+//
+//    }
+
+
     public Long getId() {
         return id;
     }
@@ -42,6 +72,14 @@ public class Unit {
 
     public String getImage() {
         return image;
+    }
+
+    public List<Review> getReviews() {
+        return reviews;
+    }
+
+    public void setReviews(List<Review> reviews) {
+        this.reviews = reviews;
     }
 
     public void setImage(String image) {

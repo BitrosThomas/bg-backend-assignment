@@ -17,6 +17,18 @@ public class Review {
     @Column(name = "review_comment")
     private String comment;
 
+    @ManyToOne(optional = false, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
+    @JoinColumn(name = "unit_id")
+    private Unit unit;
+
+    public Unit getUnit() {
+        return unit;
+    }
+
+    public void setUnit(Unit unit) {
+        this.unit = unit;
+    }
+
     public Long getId() {
         return id;
     }
@@ -41,8 +53,10 @@ public class Review {
         this.comment = comment;
     }
 
-    public Review(double score, String comment){
+
+    public Review(double score, Unit unit, String comment){
         this.score = score;
+        this.unit = unit;
         this.comment = comment;
     }
 }

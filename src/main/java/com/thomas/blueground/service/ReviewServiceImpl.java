@@ -18,7 +18,7 @@ public class ReviewServiceImpl implements ReviewService{
 
     @Override
     public ReviewModel create(ReviewModel reviewModel) {
-        Review review = new Review(reviewModel.getScore(), reviewModel.getComment());
+        Review review = new Review(reviewModel.getScore(),reviewModel.getUnit(), reviewModel.getComment());
         Review savedReview = jpaRepository.save(review);
         return reviewMapper.mapToReviewModel(savedReview);
     }
