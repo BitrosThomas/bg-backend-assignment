@@ -1,16 +1,20 @@
-package com.thomas.blueground.springbootauthupdated.user;
+package com.thomas.blueground.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "APPLICATIONUSER")
 public class ApplicationUser {
+
     @Id
+    @Column(name = "id", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
+    @Column(name = "username")
     private String username;
+
+    @Column(name = "password")
     private String password;
 
     public long getId() {

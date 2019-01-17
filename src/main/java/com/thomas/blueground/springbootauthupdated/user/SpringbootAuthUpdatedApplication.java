@@ -2,7 +2,7 @@ package com.thomas.blueground.springbootauthupdated.user;
 
 
 
-// ... other imports
+
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -15,5 +15,5 @@ public class SpringbootAuthUpdatedApplication {
         return new BCryptPasswordEncoder();
     }
 
-    // ... main method definition
+
 }

@@ -3,6 +3,7 @@ package com.thomas.blueground.springbootauthupdated.user;
 import com.auth0.jwt.JWT;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.thomas.blueground.domain.ApplicationUser;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;

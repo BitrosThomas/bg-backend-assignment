@@ -1,7 +1,7 @@
 package com.thomas.blueground.service;
 
-import com.thomas.blueground.springbootauthupdated.user.ApplicationUser;
-import com.thomas.blueground.springbootauthupdated.user.ApplicationUserRepository;
+import com.thomas.blueground.domain.ApplicationUser;
+import com.thomas.blueground.repository.ApplicationUserRepository;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

@@ -27,3 +27,5 @@ INSERT INTO REVIEW (review_score, review_comment, unit_id) VALUES ('4.5', 'This 
 INSERT INTO REVIEW (review_score, review_comment, unit_id) VALUES ('3.0', 'This is a review for id:1', '1');
 INSERT INTO REVIEW (review_score, review_comment, unit_id) VALUES ('4.0', 'This is a review comment id:1', '1');
 INSERT INTO REVIEW (review_score, review_comment, unit_id) VALUES ('3.7', 'This is a review comment id:2', '2');
+
+INSERT INTO APPLICATIONUSER (username, password) VALUES ('thomas', 'password');

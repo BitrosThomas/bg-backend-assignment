@@ -1,5 +1,7 @@
-package com.thomas.blueground.springbootauthupdated.user;
+package com.thomas.blueground.controller;
 
+import com.thomas.blueground.domain.ApplicationUser;
+import com.thomas.blueground.repository.ApplicationUserRepository;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

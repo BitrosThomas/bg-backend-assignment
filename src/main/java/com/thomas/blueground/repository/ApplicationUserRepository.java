@@ -1,6 +1,7 @@
-package com.thomas.blueground.springbootauthupdated.user;
+package com.thomas.blueground.repository;
 
 
+import com.thomas.blueground.domain.ApplicationUser;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ApplicationUserRepository extends JpaRepository<ApplicationUser, Long> {
