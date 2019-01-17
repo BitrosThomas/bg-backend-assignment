@@ -3,6 +3,7 @@ package com.thomas.blueground.springbootauthupdated.user.security;
 import com.thomas.blueground.service.UserDetailsServiceImpl;
 import com.thomas.blueground.springbootauthupdated.user.JWTAuthenticationFilter;
 import com.thomas.blueground.springbootauthupdated.user.JWTAuthorizationFilter;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -20,7 +21,10 @@ import static com.thomas.blueground.springbootauthupdated.user.SecurityConstants
 
 @EnableWebSecurity
 public class WebSecurity extends WebSecurityConfigurerAdapter {
+
+
     private UserDetailsServiceImpl userDetailsService;
+
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     public WebSecurity(UserDetailsServiceImpl userDetailsService, BCryptPasswordEncoder bCryptPasswordEncoder) {

@@ -7,6 +7,15 @@ public class ReviewModel {
     private double score;
     private String comment;
     private Unit unit;
+    private Long unit_id;
+
+    public Long getUnit_id() {
+        return unit_id;
+    }
+
+    public void setUnit_id(Long unit_id) {
+        this.unit_id = unit_id;
+    }
 
     public Unit getUnit() {
         return unit;

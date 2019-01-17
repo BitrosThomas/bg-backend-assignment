@@ -2,6 +2,7 @@ package com.thomas.blueground.controller;
 
 import com.thomas.blueground.domain.ApplicationUser;
 import com.thomas.blueground.repository.ApplicationUserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -12,7 +13,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/users")
 public class UserController {
 
+
     private ApplicationUserRepository applicationUserRepository;
+
+
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     public UserController(ApplicationUserRepository applicationUserRepository,
