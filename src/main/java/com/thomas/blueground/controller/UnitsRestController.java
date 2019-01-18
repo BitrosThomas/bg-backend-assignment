@@ -1,5 +1,6 @@
 package com.thomas.blueground.controller;
 
+import com.thomas.blueground.forms.SearchForm;
 import com.thomas.blueground.model.ReviewModel;
 import com.thomas.blueground.model.UnitModel;
 import com.thomas.blueground.service.ReviewService;
@@ -34,6 +35,14 @@ public class UnitsRestController {
         return unitService.findByRegion(region);
     }
 
+    @GetMapping(path = "/api/units/search")
+    public ResponseEntity<List<UnitModel>> findByTitleAndRegion(@RequestParam (name = "title", required = false, defaultValue = "") String title,
+                                                @RequestParam  (name = "region", required = false, defaultValue = "") String region
+
+                                                , @ModelAttribute SearchForm searchForm) {
+        List<UnitModel> list = unitService.findByTitleAndRegion(title, region);
+        return ResponseEntity.ok(list);
 
 
+    }
 }

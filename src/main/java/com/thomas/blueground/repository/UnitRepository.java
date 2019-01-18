@@ -12,5 +12,6 @@ public interface UnitRepository extends JpaRepository<Unit, Long> {
 
     List<Unit> findByTitleContaining(String title);
     List<Unit> findByRegionContaining(String region);
+    List<Unit> findByTitleAndRegion(String title, String region);
 
 }

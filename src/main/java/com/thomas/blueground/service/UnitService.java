@@ -13,5 +13,6 @@ public interface UnitService {
     List<UnitModel> findAll();
     List<UnitModel> findByTitle(String title);
     List<UnitModel> findByRegion(String region);
+    List<UnitModel> findByTitleAndRegion(String title, String region);
 
 }

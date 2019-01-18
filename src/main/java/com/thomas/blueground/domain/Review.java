@@ -18,7 +18,7 @@ public class Review {
     private String comment;
 
     @ManyToOne(optional = false, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH})
-    @JoinColumn(name = "unit_id")
+    @JoinColumn(name = "unit_id", referencedColumnName = "unit_id", nullable = false)
     private Unit unit;
 
     public Unit getUnit() {

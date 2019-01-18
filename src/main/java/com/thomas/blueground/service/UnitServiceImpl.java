@@ -60,4 +60,18 @@ public class UnitServiceImpl implements  UnitService {
                 .map(unit -> unitMapper.mapToUnitModel(unit))
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public List<UnitModel> findByTitleAndRegion(String title, String region) {
+
+        return unitRepository
+                .findByTitleAndRegion(title,region)
+                .stream()
+                .sorted(Comparator.comparingDouble(Unit::getScore)
+                .reversed())
+                .map(unit -> unitMapper.mapToUnitModel(unit))
+                .collect(Collectors.toList());
+
+
+    }
 }

@@ -1,5 +1,7 @@
 package com.thomas.blueground.domain;
 
+import org.hibernate.annotations.Formula;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -30,11 +32,16 @@ public class Unit {
     @Column(name = "unit_price")
     private double price;
 
+    @OneToMany(mappedBy = "unit", cascade = {CascadeType.REMOVE,CascadeType.MERGE, CascadeType.REFRESH}, orphanRemoval = true, targetEntity = Review.class)
+    private List<Review> reviews;
+
     @Column(name = "unit_score")
+//    @Formula(value = "SELECT AVERAGE(score) FROM REVIEWS" +
+//            "WHERE unit_id ={id}" +
+//            "=> UPDATE TABLE UNITS values('0.1' WHERE unit_id = {unit_id}")
     private double score;
 
-    @OneToMany(mappedBy = "unit", cascade = CascadeType.REMOVE, targetEntity = Review.class)
-    private List<Review> reviews;
+
 
 //    public Unit(String image, String title, String region, String description, String cancellation, double price, double score, List<Review> reviews) {
 //        this.image = image;
