@@ -1,6 +1,7 @@
 package com.thomas.blueground.model;
 
 public class UnitModel {
+    private Long unitID;
     private String image;
     private String title;
     private String region;
@@ -65,7 +66,16 @@ public class UnitModel {
         this.score = score;
     }
 
-    public UnitModel(String image, String title, String region, String description, String cancellation, double price, double score){
+    public Long getUnitID() {
+        return unitID;
+    }
+
+    public void setUnitID(Long unitID) {
+        this.unitID = unitID;
+    }
+
+    public UnitModel(Long unitID,String image, String title, String region, String description, String cancellation, double price, double score){
+        this.unitID = unitID;
         this.image = image;
         this.title = title;
         this.region = region;

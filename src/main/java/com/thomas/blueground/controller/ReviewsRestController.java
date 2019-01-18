@@ -16,11 +16,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class ReviewsRestController {
 
     @Autowired
-    ReviewService reviewService;
+    ReviewService reviewServiceImpl;
 
     @PostMapping(path= "/api/")
     public ResponseEntity<ReviewModel> create(@RequestBody ReviewModel review) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(reviewService.create(review));
+        return ResponseEntity.status(HttpStatus.CREATED).body(reviewServiceImpl.create(review));
     }
 
 }

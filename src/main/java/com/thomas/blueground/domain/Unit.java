@@ -12,7 +12,7 @@ public class Unit {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "unit_id")
-    private Long id;
+    private Long unitID;
 
     @Column(name = "unit_image")
     private String image;
@@ -69,12 +69,12 @@ public class Unit {
 //    }
 
 
-    public Long getId() {
-        return id;
+    public Long getUnitID() {
+        return unitID;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setUnitID(Long unitID) {
+        this.unitID = unitID;
     }
 
     public String getImage() {

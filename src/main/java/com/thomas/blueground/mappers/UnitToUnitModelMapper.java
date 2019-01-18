@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class UnitToUnitModelMapper {
 
     public UnitModel mapToUnitModel(Unit unit) {
-        UnitModel unitModel = new UnitModel(unit.getImage(), unit.getTitle(),  unit.getRegion(), unit.getDescription(), unit.getCancellation(),unit.getPrice(), unit.getScore() );
+        UnitModel unitModel = new UnitModel(unit.getUnitID(),unit.getImage(), unit.getTitle(),  unit.getRegion(), unit.getDescription(), unit.getCancellation(),unit.getPrice(), unit.getScore() );
         return unitModel;
     }
 
