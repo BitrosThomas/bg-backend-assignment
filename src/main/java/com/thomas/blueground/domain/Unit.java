@@ -41,34 +41,6 @@ public class Unit {
 //            "=> UPDATE TABLE UNITS values('0.1' WHERE unit_id = {unit_id}")
     private double score;
 
-
-
-//    public Unit(String image, String title, String region, String description, String cancellation, double price, double score, List<Review> reviews) {
-//        this.image = image;
-//        this.title = title;
-//        this.region = region;
-//        this.description = description;
-//        this.cancellation = cancellation;
-//        this.price = price;
-//        this.score = score;
-//        this.reviews = reviews;
-//    }
-//
-//    public Unit(Long id,String image, String title, String region, String description, String cancellation, double price, double score){
-//        this.image = image;
-//        this.title = title;
-//        this.region = region;
-//        this.description = description;
-//        this.cancellation = cancellation;
-//        this.price = price;
-//        this.score = score;
-//    }
-//
-//    public Unit() {
-//
-//    }
-
-
     public Long getUnitID() {
         return unitID;
     }

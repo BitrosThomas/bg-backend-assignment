@@ -10,7 +10,7 @@ public class ReviewToReviewModelMapper {
     public ReviewModel mapToReviewModel(Review review) {
         ReviewModel reviewModel = new ReviewModel();
         reviewModel.setScore(review.getScore());
-        reviewModel.setUnit_id(review.getId());
+        reviewModel.setUnit_id(review.getUnit().getUnitID());
         reviewModel.setComment(review.getComment());
         return reviewModel;
     }

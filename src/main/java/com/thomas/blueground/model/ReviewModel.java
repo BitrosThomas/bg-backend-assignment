@@ -6,7 +6,7 @@ public class ReviewModel {
 
     private double score;
     private String comment;
-//    private Unit unit;
+
     private Long unit_id;
 
     public Long getUnit_id() {
@@ -16,14 +16,6 @@ public class ReviewModel {
     public void setUnit_id(Long unit_id) {
         this.unit_id = unit_id;
     }
-
-//    public Unit getUnit() {
-//        return unit;
-//    }
-//
-//    public void setUnit(Unit unit) {
-//        this.unit = unit;
-//    }
 
     public double getScore() {
         return score;
