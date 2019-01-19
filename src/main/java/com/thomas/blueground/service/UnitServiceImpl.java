@@ -1,6 +1,7 @@
 package com.thomas.blueground.service;
 
 import com.thomas.blueground.domain.Unit;
+import com.thomas.blueground.exception.UnitNotFoundException;
 import com.thomas.blueground.mappers.UnitToUnitModelMapper;
 import com.thomas.blueground.model.UnitModel;
 import com.thomas.blueground.repository.UnitRepository;
@@ -37,7 +38,19 @@ public class UnitServiceImpl implements  UnitService {
     }
 
     @Override
+    public Unit getUnitAllByUnitID(Long unitID){
+
+        Unit unit = unitRepository.findUnitByUnitID(unitID);
+        if(unit!=null){
+            return unit;
+        }else {
+            throw new UnitNotFoundException("Unit with unitID: " + unitID + " not found");
+        }
+    }
+
+    @Override
     public List<UnitModel> findByTitle(String title) {
+
 
         return unitRepository
                 .findByTitleContaining(title)

@@ -40,8 +40,14 @@ public class UnitsRestController {
                                                 @RequestParam  (name = "region", required = false, defaultValue = "") String region
 
                                                 , @ModelAttribute SearchForm searchForm) {
+        try {
         List<UnitModel> list = unitService.findByTitleAndRegion(title, region);
         return ResponseEntity.ok(list);
+        }
+        catch (Exception ex){
+            return ResponseEntity.notFound().build();
+
+        }
 
 
     }
