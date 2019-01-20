@@ -36,10 +36,9 @@ public class Unit {
     private List<Review> reviews;
 
     @Column(name = "unit_score")
-//    @Formula(value = "SELECT AVERAGE(score) FROM REVIEWS" +
-//            "WHERE unit_id ={id}" +
-//            "=> UPDATE TABLE UNITS values('0.1' WHERE unit_id = {unit_id}")
     private double score;
+
+
 
     public Long getUnitID() {
         return unitID;

@@ -11,6 +11,7 @@ public class ReviewToReviewModelMapper {
         ReviewModel reviewModel = new ReviewModel();
         reviewModel.setScore(review.getScore());
         reviewModel.setUnit_id(review.getUnit().getUnitID());
+        reviewModel.setApplicationUser_id(review.getApplicationUser().getId());
         reviewModel.setComment(review.getComment());
         return reviewModel;
     }

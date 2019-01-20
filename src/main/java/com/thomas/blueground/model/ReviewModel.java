@@ -2,12 +2,24 @@ package com.thomas.blueground.model;
 
 import com.thomas.blueground.domain.Unit;
 
+import javax.validation.constraints.NotNull;
+
 public class ReviewModel {
 
+    @NotNull( message = "Please enter a Score for the review!")
     private double score;
+    
     private String comment;
-
     private Long unit_id;
+    private Long applicationUser_id;
+
+    public Long getApplicationUser_id() {
+        return applicationUser_id;
+    }
+
+    public void setApplicationUser_id(Long applicationUser_id) {
+        this.applicationUser_id = applicationUser_id;
+    }
 
     public Long getUnit_id() {
         return unit_id;

@@ -21,6 +21,18 @@ public class Review {
     @JoinColumn(name = "unit_id", referencedColumnName = "unit_id", nullable = false)
     private Unit unit;
 
+    @ManyToOne(optional = false, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH} )
+    @JoinColumn(name = "user_id", referencedColumnName = "user_id", nullable = false )
+    private ApplicationUser applicationUser;
+
+    public ApplicationUser getApplicationUser() {
+        return applicationUser;
+    }
+
+    public void setApplicationUser(ApplicationUser applicationUser) {
+        this.applicationUser = applicationUser;
+    }
+
     public Unit getUnit() {
         return unit;
     }
@@ -54,9 +66,11 @@ public class Review {
     }
 
 
-    public Review(double score, Unit unit, String comment){
+
+    public Review(double score, Unit unit, ApplicationUser applicationUser, String comment){
         this.score = score;
         this.unit = unit;
+        this.applicationUser = applicationUser;
         this.comment = comment;
     }
 }

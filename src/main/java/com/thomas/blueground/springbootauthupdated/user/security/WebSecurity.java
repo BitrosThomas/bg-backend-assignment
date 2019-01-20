@@ -17,6 +17,7 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.context.annotation.Bean;
 
 
+import static com.thomas.blueground.springbootauthupdated.user.SecurityConstants.H2_CONSOLE;
 import static com.thomas.blueground.springbootauthupdated.user.SecurityConstants.SIGN_UP_URL;
 
 @EnableWebSecurity
@@ -35,7 +36,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.cors().and().csrf().disable().authorizeRequests()
-                .antMatchers(HttpMethod.POST, SIGN_UP_URL).permitAll()
+                .antMatchers(HttpMethod.POST, SIGN_UP_URL,H2_CONSOLE).permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .addFilter(new JWTAuthenticationFilter(authenticationManager()))
