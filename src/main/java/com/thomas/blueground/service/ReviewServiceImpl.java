@@ -7,6 +7,11 @@ import com.thomas.blueground.repository.ReviewJPARepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+/**
+    This is the process of creating a new review by using the mapper.
+ */
+
+
 @Service
 public class ReviewServiceImpl implements ReviewService{
 

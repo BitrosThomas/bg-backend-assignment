@@ -7,6 +7,11 @@ import java.util.List;
 
 public interface UnitRepository extends JpaRepository<Unit, Long> {
 
+    /**
+     The lists for the searching process. One for searching based on title , one for region
+     and the combination of both
+     */
+
     @Override
     List<Unit> findAll();
     List<Unit> findByTitleContaining(String title);

@@ -13,7 +13,9 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-
+/**
+    The streams that we used to create the lists and sorting.
+ */
 
 @Component
 public class UnitServiceImpl implements  UnitService {
